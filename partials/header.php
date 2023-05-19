@@ -51,7 +51,7 @@
                                 <nav>                  
                                     <ul id="navigation">
                                         <li><a href="index.html">Início</a></li>
-                                        <li><a href="weather.html">Temo</a></li>
+                                        <li><a href="weather.html">Tempo</a></li>
                                         <li><a href="#">Categorias</a>
                                             <div class="row submenu">
                                                 <div class="col-md-4">

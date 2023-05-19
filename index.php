@@ -1,8 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-<?php
-    include('partials/head.php');
-?>
+<head>
+    <?php
+        include('partials/head.php');
+    ?>
+</head>
 
 <body>
 <?php

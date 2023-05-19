@@ -50,9 +50,9 @@
                             <div class="main-menu d-none d-md-block">
                                 <nav>                  
                                     <ul id="navigation">
-                                        <li><a href="index.html">Início</a></li>
-                                        <li><a href="weather.html">Tempo</a></li>
-                                        <li><a href="#">Categorias</a>
+                                        <li><a href="index.php">Início</a></li>
+                                        <li><a href="weather.php">Tempo</a></li>
+                                        <li><a href="#" class="block-in-black">Categorias</a>
                                             <div class="row submenu">
                                                 <div class="col-md-4">
                                                     <a href="tech.html">Tecnologia</a>

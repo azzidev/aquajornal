@@ -1,4 +1,6 @@
-<head>
+    <?php
+        date_default_timezone_set('America/Sao_Paulo');
+    ?>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>News  HTML-5 Template </title>
@@ -20,4 +22,3 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-</head>

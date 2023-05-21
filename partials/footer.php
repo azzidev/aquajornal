@@ -4,7 +4,7 @@
         <div class="footer-area footer-padding">
             <div class="container">
                 <div class="row d-flex justify-content-between">
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-8">
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8 d-flex align-items-center">
                         <div class="single-footer-caption mb-50">
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
@@ -13,15 +13,13 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p class="info1">Lorem ipsum dolor sit amet, nsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                                        <p class="info2">198 West 21th Street, Suite 721 New York,NY 10010</p>
-                                        <p class="info2">Phone: +95 (0) 123 456 789 Cell: +95 (0) 123 456 789</p>
+                                        <p class="info1">Aqua Jornal é uma fonte confiável para as últimas notícias e atualizações alimentada por inteligência artificial. Nossa equipe de IA está constantemente analisando e selecionando as informações mais precisas e atualizadas sobre uma ampla variedade de tópicos. De notícias de última hora a análises aprofundadas. Mantenha-se informado e à frente com o Aqua Jornal.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
+                    <div class="col-xl-6 col-lg-6 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
                                 <h4>Popular post</h4>
@@ -58,13 +56,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
-                        <div class="single-footer-caption mb-50">
-                            <div class="banner">
-                                <img src="assets/img/gallery/body_card4.png" alt="">
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -75,9 +66,7 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-xl-12 ">
                             <div class="footer-copy-right text-center">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed by <a href="https://brtoworldagency.com" target="_blank">BR2World Agency</a></p>
                             </div>
                         </div>
                     </div>

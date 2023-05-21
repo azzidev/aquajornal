@@ -13,8 +13,8 @@
     ?>
     <main>
         <!-- ================ contact section start ================= -->
-        <section>
-            <div class="container">
+        <section class="py-5">
+            <div class="container py-5">
                 <div class="row px-3">
                     <div class="col-md-4 widget">
                         <div class="loader" id="loader"></div>
@@ -58,11 +58,6 @@
         </section>
     </main>
 </body>
-<?php
-    include('partials/footer.php');
-    include('partials/search.php');
-    include('partials/scripts.php');
-?>
 
 <script>
     const WEATHER_API_KEY = "d860d1c7ae8a4fda9bd222436231904";
@@ -109,11 +104,13 @@
             return "Norte";
         }else if(dir == "S"){
             return "Sul";
-        }else if(dir == "SE"){
+        }else if(dir.indexOf("SE") != -1){
             return "Sudeste"
-        }else if(dir == "NW"){
+        }else if(dir.indexOf("SW") != -1){
+            return "Sudoeste"
+        }else if(dir.indexOf("NW") != -1){
             return "Nordeste"
-        }else if(dir == "NE"){
+        }else if(dir.indexOf("NE") != -1){
             return "Noroeste"
         }
     }
@@ -253,5 +250,10 @@
     }
     });
 </script>
+<?php
+    include('partials/footer.php');
+    include('partials/search.php');
+    include('partials/scripts.php');
+?>
 
 </html>

@@ -33,11 +33,12 @@
                 $author = $obj['author_news'];
                 $categories = str_replace(array('[',']'), '', $obj['category_news']);
                 
-                $stmt = $conn->prepare("SELECT * FROM categories_aqua WHERE (categories_uri in ($categories))");
+                $stmt = $conn->prepare("SELECT * FROM categories_aqua WHERE (category_uri in ($categories))");
                 $stmt->execute();
                 
-                if($stmt->rowCount() == 1){
-                    while($obj=$stmt->fetch()){
+                if($stmt->rowCount() >= 1){
+                    $objs=$stmt->fetchAll();
+                    foreach($objs AS $obj){
                         array_push($name_categories, $obj['name_category']);
                     }
                 }else{
@@ -73,6 +74,16 @@
                     <div class="col-lg-8">
                         <!-- Trending Tittle -->
                         <div class="about-right mb-90">
+                            <h3>
+                                <?php
+                                    foreach($name_categories AS $category){
+                                        $color = random_color_part();
+                                        $textColor = decide_color($color);
+
+                                        echo "<span class='badge' style='background: $color; color: $textColor'>$category</span>";
+                                    }
+                                ?>                            
+                            </h3>
                             <?=$content?>
                             <div class="social-share pt-30">
                                 <div class="section-tittle">

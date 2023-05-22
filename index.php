@@ -4,7 +4,7 @@
     <?php
         include('partials/head.php');
     ?>
-    <title>Notícias, Artigos, Novidades e muito mais | Aqua jornal</title>
+    <title>Notícias, Artigos, Novidades e muito mais | Aqua Jornal</title>
 </head>
 
 <body>
@@ -22,6 +22,26 @@
                     <div class="col-lg-8">
                         <!-- Trending Top -->
                         <div class="slider-active">
+                            <?php
+                                // LAST BEST THREE NEWS
+                                $last_year = date('Y-m-d H:i:s', strtotime('-1 years'));
+                                $today = date('Y-m-d H:i:s');
+                                $stmt = $conn->prepare("SELECT * FROM insights_news WHERE created_date BETWEEN $last_year AND $today");
+                                $stmt->execute();
+
+                                $newsURI = array();
+                                $likesNews = array();
+                                $average_viewing_time_news = array();
+                                $saves = array();
+                                $average_shares = array();
+
+                                if($stmt->rowCount() >= 1){
+                                    $objs=$stmt->fetchAll();
+                                    foreach($objs AS $obj){
+
+                                    }
+                                }
+                            ?>
                             <!-- Single -->
                             <div class="single-slider">
                                 <div class="trending-top mb-30">

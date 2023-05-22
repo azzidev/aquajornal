@@ -95,7 +95,6 @@
     }
 
     function getDir(dir){
-        console.log(dir)
         if(dir == "E"){
             return "Leste";
         }else if(dir ==  "W"){
@@ -136,9 +135,9 @@
         pressureEl.innerHTML = `<i class="fas fa-angle-double-down mr-3"></i> ${newPressure} hectopascal de pressão`; 
 
         if(condition == 'Night'){
-            $('body').css({background: 'rgb(3 0 31)'})
-            $('.widget-infos .now-info p').css({color: '#fff !important'})
-            $('.source p').css({color: 'rgb(220 220 220 / 69%)'})
+            $('.widget-infos .now-info p').css({color: '#fff'})
+            $('.source p').css({color: 'rgb(220, 220, 220, 69%)'})
+            $('body').css({background: 'rgb(3, 0, 31)'})
         }
     }
 
@@ -149,8 +148,8 @@
     }
 
     function hideLoading() {
-    loaderEl.style.display = 'none';
-    toggleEl.style.display = 'inline-block';
+        loaderEl.style.display = 'none';
+        toggleEl.style.display = 'inline-block';
     }
 
     function changeTemp(nextTemp) {
@@ -187,7 +186,6 @@
                 const url = `https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`;
 
                 try {
-                    console.log(`fetch - ${url}`);
                     const resp = await fetch(url);
                     const data = await resp.json();
                     if (data) {
@@ -222,7 +220,7 @@
             city = await getLocation();
         }
         } catch(e) {
-        console.error(e);
+            console.error(e);
         }
     
     
@@ -230,10 +228,9 @@
             `https://api.weatherapi.com/v1/current.json?key=${WEATHER_API_KEY}&q=${city}+day=14`;
 
         try {
-            console.log(`fetch - ${url}`);
             const resp = await fetch(url);
             const data = await resp.json();
-            console.log(data)
+
             tempC = Math.round(data.current.temp_c);
             tempF = Math.round(data.current.temp_f);
             tempD = data.current.last_updated;

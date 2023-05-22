@@ -23,7 +23,7 @@ body {
 }
 .widget-infos .now-info p{
     font-size: 20px;
-    color: #212529;
+    color: #ffffff;
     margin-bottom: 0px !important;
 }
 .widget-infos .now-info p i{
@@ -60,7 +60,7 @@ body {
 }
 
 .source p{
-    color:rgba(0, 0, 0, 0.69);
+    color: rgb(220 220 220 / 69%);
     text-align: right;
 }
 

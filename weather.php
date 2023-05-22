@@ -115,7 +115,7 @@
         }
     }
 
-    function setData(newTemp, newCity, newUpdate, newWild, newWildDir, newHumidity, newRoomTemperature, newUvIndice, newPrecip, newPressure, newImage) {
+    function setData(newTemp, newCity, newUpdate, newWild, newWildDir, newHumidity, newRoomTemperature, newUvIndice, newPrecip, newPressure, newImage, condition) {
         temp = newTemp;
         city = newCity;
 
@@ -129,11 +129,17 @@
         cityEl.innerHTML = `próximo de ${newCity}`;
         updateEl.innerHTML = `Última atualização: ${update}`;
         wildEl.innerHTML = `<i class="fas fa-wind mr-3"></i> ventos de ${newWild} km/h ao `+getDir(newWildDir);
-        humidityEl.innerHTML = `<i class="fas fa-tint mr-3"></i> ${newHumidity}% de humindade no ar `;
+        humidityEl.innerHTML = `<i class="fas fa-tint mr-3"></i> ${newHumidity}% de humidade no ar `;
         roomTemperatureEl.innerHTML = `<i class="fas fa-walking mr-3"></i> ${newRoomTemperature}° sensação térmica`;
         uvIndiceEl.innerHTML = `<i class="fas fa-sun mr-3"></i> índice UV  ${newUvIndice} de 10`;
         precipEl.innerHTML = `<i class="fas fa-cloud mr-3"></i> ${newPrecip}mm de probabilidade de chuva`; 
         pressureEl.innerHTML = `<i class="fas fa-angle-double-down mr-3"></i> ${newPressure} hectopascal de pressão`; 
+
+        if(condition == 'Night'){
+            $('body').css({background: 'rgb(3 0 31)'})
+            $('.widget-infos .now-info p').css({color: '#fff !important'})
+            $('.source p').css({color: 'rgb(220 220 220 / 69%)'})
+        }
     }
 
     function setTemp(newTemp) {
@@ -233,7 +239,7 @@
             tempD = data.current.last_updated;
         
             hideLoading();
-            setData(tempC, city, tempD, data.current.wind_kph, data.current.wind_dir, data.current.humidity, data.current.feelslike_c, data.current.uv, data.current.precip_mm, data.current.pressure_mb, data.current.condition.icon.replace('//',''));
+            setData(tempC, city, tempD, data.current.wind_kph, data.current.wind_dir, data.current.humidity, data.current.feelslike_c, data.current.uv, data.current.precip_mm, data.current.pressure_mb, data.current.condition.icon.replace('//',''), data.current.condition.text);
         } catch (err) {
             hideLoading();
             console.error(err);

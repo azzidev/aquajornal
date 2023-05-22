@@ -4,6 +4,7 @@
     <?php
         include('partials/head.php');
     ?>
+    <title>Notícias, Artigos, Novidades e muito mais | Aqua jornal</title>
 </head>
 
 <body>

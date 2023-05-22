@@ -1,11 +1,7 @@
 <?php
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-
     include('components/connect-db.php');
     include('modules/functions.php');
-    
+
     $name = "";
     $content = "";
     $images = "";
@@ -58,6 +54,7 @@
     <?php
         include('partials/head.php');
     ?>
+    <title><?=$name?></title>
 </head>
     
 <body>

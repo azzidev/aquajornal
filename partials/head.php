@@ -1,5 +1,9 @@
     <?php
         date_default_timezone_set('America/Sao_Paulo');
+        if(!isset($conn)){
+            include('components/connect-db.php');
+            include('modules/functions.php');
+        }
     ?>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">

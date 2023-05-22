@@ -5,6 +5,7 @@
         include('partials/head.php');
     ?>
     <link rel="stylesheet" href="assets/css/weather.css"></link>
+    <title>Previsão do tempo | Aqua Jornal</title>
 </head>
 <body>    
     <?php
@@ -134,10 +135,14 @@
         precipEl.innerHTML = `<i class="fas fa-cloud mr-3"></i> ${newPrecip}mm de probabilidade de chuva`; 
         pressureEl.innerHTML = `<i class="fas fa-angle-double-down mr-3"></i> ${newPressure} hectopascal de pressão`; 
 
+        console.log(condition)
         if(condition == 'Night'){
             $('.widget-infos .now-info p').css({color: '#fff'})
             $('.source p').css({color: 'rgb(220, 220, 220, 69%)'})
             $('body').css({background: 'rgb(3, 0, 31)'})
+        }else if(condition === 'Partly cloudy'){
+            $('body').css({background: 'rgb(171, 171, 171)'})
+            $('.source p').css({color: 'rgb(0, 0, 0, 69%)'})
         }
     }
 

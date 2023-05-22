@@ -1,3 +1,20 @@
+<?php
+    $stmt = $conn->prepare("SELECT * FROM categories_aqua ORDER BY category_uri ASC");
+    $stmt->execute();
+
+    $nameArray = array();
+    $urlArray = array();
+
+    if($stmt->rowCount() >= 1){
+        $objs=$stmt->fetchAll();
+        foreach($objs AS $obj){
+            array_push($nameArray, $obj['name_category']);
+            array_push($urlArray, $obj['category_url']);
+        }
+    }else{
+        $err = "ERR0004";
+    }
+?>
 <!-- Header Start -->
 <header>
     <div class="header-area">
@@ -54,24 +71,25 @@
                                         <li><a href="weather.php">Tempo</a></li>
                                         <li><a href="#" class="block-in-black">Categorias</a>
                                             <div class="row submenu">
-                                                <div class="col-md-4">
-                                                    <a href="tech.html">Tecnologia</a>
-                                                    <a href="edu.html">Educação</a>
-                                                    <a href="sports.html">Esporte</a>
-                                                    <a href="games.html">Jogos</a>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <a href="tech.html">Tecnologia</a>
-                                                    <a href="edu.html">Educação</a>
-                                                    <a href="sports.html">Esporte</a>
-                                                    <a href="games.html">Jogos</a>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <a href="tech.html">Tecnologia</a>
-                                                    <a href="edu.html">Educação</a>
-                                                    <a href="sports.html">Esporte</a>
-                                                    <a href="games.html">Jogos</a>
-                                                </div>
+                                                <?php
+                                                    $max_three = 0;
+                                                    for($iterator = 0; $iterator < count($nameArray); $iterator++){
+                                                        if($max_three == 0){
+                                                            echo '<div class="col-md-4">';
+                                                        }
+
+                                                        echo '
+                                                            <a href="'.$urlArray[$iterator].'.php" tabindex="0">'.$nameArray[$iterator].'</a>
+                                                        ';
+
+                                                        if($max_three == 3){
+                                                            $max_three = 0;
+                                                            echo '</div>';
+                                                        }
+
+                                                        $max_three++;
+                                                    }
+                                                ?>
                                             </div>
                                         </li>
                                         <li><a href="latest-news.html">Artigos recentes</a></li>

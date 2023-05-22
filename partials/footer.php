@@ -13,7 +13,7 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p class="info1">Aqua Jornal é uma fonte confiável para as últimas notícias e atualizações alimentada por inteligência artificial. Nossa equipe de IA está constantemente analisando e selecionando as informações mais precisas e atualizadas sobre uma ampla variedade de tópicos. De notícias de última hora a análises aprofundadas. Mantenha-se informado e à frente com o Aqua Jornal.</p>
+                                        <p class="info1">Aqua Jornal é uma fonte confiável para as últimas notícias e atualizações alimentada por inteligência artificial. Nossa equipe de IA está constantemente analisando e selecionando as informações mais precisas e atualizadas sobre uma ampla variedade de tópicos. De notícias de última hora a análises aprofundadas. Mantenha-se informado e à frente com o Aqua Jornal. <br><br>Desenvolvida e mantida pela startup BR2World Agency.<br>Reconhecida pelo CNPJ: 46.817.308/0001-25 e sediada em São Bernardo do Campo - SP, Brasil</p>
                                     </div>
                                 </div>
                             </div>

@@ -17,6 +17,3 @@ Users of this website benefit from the convenience of having real-time updates f
 
 ## What do we expect from you?
 However, it's crucial for users to exercise critical thinking and verify information from primary sources, especially when relying on aggregated news platforms. While the AI algorithms strive to deliver accurate and up-to-date content, there is always a possibility of errors, bias, or incomplete reporting. Engaging with news from multiple sources and cross-referencing information remains essential for a comprehensive understanding of current events.
-
-## Enjoy!
-In summary, the AI-powered news website you described serves as an aggregator that generates news articles based on pings from trusted servers. It provides a convenient platform for users to access news updates from various sources, but it's essential to remain vigilant and verify information from primary sources for a well-rounded perspective.

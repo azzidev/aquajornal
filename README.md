@@ -1,3 +1,5 @@
+###### THIS APPLICATION IS STILL UNDER DEVELOPMENT, SOME ACTIONS MAY NOT WORK OR HAVE STOPPED WORKING OR EXISTING AS THE APPLICATION DEVELOPS. WE RECOMMEND ITS USE ONLY FOR PERSONAL USE. WE REMOVE ANY COMMITMENT TO FUNCTIONALITY, AS WELL AS CONSTANT UPDATES TO RESOLVE PROBLEMS. THE PROJECT IS OPEN SOURCE, THEREFORE YOU CAN MAKE YOUR OWN UPDATES AND CONTRIBUTE TO THE FUNCTIONING OF THE APPLICATION.
+
 # Aqua Jornal
 Aqua Jornal operates by continuously monitoring and receiving pings from reputable servers known for their reliable news content. These pings serve as triggers for the AI algorithms, prompting them to fetch the latest updates and create news articles based on the information received.
 

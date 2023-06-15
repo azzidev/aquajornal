@@ -8,6 +8,8 @@
     <title>Previsão do tempo | Aqua Jornal</title>
 </head>
 <body>    
+    <div class="rain front-row"></div>
+    <div class="rain back-row"></div>
     <?php
         include('partials/preload.php');
         include('partials/header.php');
@@ -143,6 +145,12 @@
         }else if(condition === 'Partly cloudy'){
             $('body').css({background: 'rgb(171, 171, 171)'})
             $('.source p').css({color: 'rgb(0, 0, 0, 69%)'})
+        }else if(condition.indexOf('rain')){
+            $('body').css({background: 'linear-gradient(to bottom, #202020, #111119)'})
+            $('.source p').css({color: 'rgb(220, 220, 220, 69%)'})
+            $('.now-info p').css({color: 'rgb(220, 220, 220, 69%)'})
+            $('body').addClass('back-row-toggle splat-toggle')
+            makeItRain()
         }
     }
 

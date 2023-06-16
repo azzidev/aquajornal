@@ -244,6 +244,8 @@
             const resp = await fetch(url);
             const data = await resp.json();
 
+            console.log(data)
+
             tempC = Math.round(data.current.temp_c);
             tempF = Math.round(data.current.temp_f);
             tempD = data.current.last_updated;

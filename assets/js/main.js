@@ -432,3 +432,23 @@ var makeItRain = function() {
   $('.rain.front-row').append(drops);
   $('.rain.back-row').append(backDrops);
 }
+
+function setAverageTime() {
+  var finishRead = new Date();
+  var time = (finishRead - startRead) / 1000;
+  
+  $.ajax({
+    url: 'components/update-averagetime.php',
+    type: 'post',
+    data: {time: time, uri: news_uri}
+  }).done(function(data) {
+    console.log(time)
+    if(data != true){
+      $.ajax({
+        url: 'components/errors.php',
+        type: 'post',
+        data: {title: 'averagetime', category: 'news', content: data, uri: news_uri}
+      })
+    }
+  });
+}

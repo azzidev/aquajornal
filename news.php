@@ -10,6 +10,7 @@
     $edit_date = "";
     $author = "";
     $name_categories = array();
+    $news_uri = "";
 
     if(isset($_GET['q'])){
         $prevent_string = clearString($_GET['q']);
@@ -23,7 +24,8 @@
                 $name = $obj['name_news'];
                 $content = $obj['content_news'];
                 $images = $obj['images_news'];
-                $insights = $obj['insights_news'];
+                $insights_uri = $obj['news_uri'];
+                $news_uri = $insights_uri;
                 $date = $obj['date_news'];
                 $edit_date = $obj['edit_date'];
                 $author = $obj['author_news'];
@@ -36,6 +38,23 @@
                     $objs=$stmt->fetchAll();
                     foreach($objs AS $obj){
                         array_push($name_categories, $obj['name_category']);
+                    }
+
+                    $stmt = $conn->prepare("SELECT * FROM insights_news WHERE news_uri=:uri");
+                    $stmt->bindParam(':uri', $insights_uri);
+                    $stmt->execute();
+
+                    if($stmt->rowCount() >= 1){
+                        if($obj=$stmt->fetch()){
+                            $temp_views = intval($obj['views_page'])+1;
+
+                            $stmt = $conn->prepare("UPDATE insights_news SET views_page=:views WHERE news_uri=:uri");
+                            $stmt->bindParam(':views', $temp_views);
+                            $stmt->bindParam(':uri', $insights_uri);
+                            $stmt->execute();
+                        }
+                    }else{
+                        $err = "ERR0001";
                     }
                 }else{
                     $err = "ERR0001";
@@ -52,6 +71,7 @@
 <html lang="pt_BR">
 <head>
     <?php
+        echo "<script>var startRead = new Date();var news_uri = ".$news_uri.";</script>";
         include('partials/head.php');
     ?>
     <title><?=$name?></title>
@@ -154,4 +174,7 @@
 ?>
     
 </body>
+<script>
+  window.addEventListener('beforeunload', setAverageTime)
+</script>
 </html>

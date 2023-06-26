@@ -42,12 +42,12 @@
                 <div class="container">
                     <div class="row d-flex align-items-center">
                         <!-- Logo -->
-                        <div class="col-xl-3 col-lg-3 col-md-3 d-none d-md-block">
+                        <div class="col-xl-4 col-lg-4 col-md-4 d-none d-md-block">
                             <div class="logo">
                                 <a href="index.php"><img src="assets/img/logo/aquajornal.png" alt=""></a>
                             </div>
                         </div>
-                        <div class="col-xl-9 col-lg-9 col-md-9">
+                        <div class="col-xl-8 col-lg-8 col-md-8">
                             <div class="header-banner f-right ">
                                 <img src="assets/img/gallery/header_card.png" alt="">
                             </div>
